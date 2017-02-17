@@ -1,0 +1,782 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="APP分析," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="&amp;emsp;&amp;emsp;小组成员 ：雷勋陶 汤迪 杜春鹏
+
+产品简介&amp;emsp;&amp;emsp;网易云课堂，是网易公司打造的在线实用技能学习平台，该平台于2012年12月底正式上线，主要为学习者提供海量、优质的课程，用户可以根据自身的学习程度，自主安排学习进度。&amp;emsp;&amp;emsp;立足于实用性的要求，网易云课堂与多家教育、培训机构建立合作，课程数量已达4100+，课时总数超50000,涵盖实用软件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网易云案例分析">
+<meta property="og:url" content="http://github.com/tangkedi/2017/02/10/蜜蜂学堂/index.html">
+<meta property="og:site_name" content="小路弯弯">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;小组成员 ：雷勋陶 汤迪 杜春鹏
+
+产品简介&amp;emsp;&amp;emsp;网易云课堂，是网易公司打造的在线实用技能学习平台，该平台于2012年12月底正式上线，主要为学习者提供海量、优质的课程，用户可以根据自身的学习程度，自主安排学习进度。&amp;emsp;&amp;emsp;立足于实用性的要求，网易云课堂与多家教育、培训机构建立合作，课程数量已达4100+，课时总数超50000,涵盖实用软件">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/wangyi1.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/wangyi2.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/wangyi3.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/p1.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/p2.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/p3.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/p4.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/p5.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/p6.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/p7.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/p8.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/p9.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/x.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/x1.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/x2.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/x3.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/x4.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/x5.png">
+<meta property="og:image" content="http://github.com/tangkedi/images/wangyi/mi1.png">
+<meta property="og:updated_time" content="2017-02-17T16:16:42.243Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网易云案例分析">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;小组成员 ：雷勋陶 汤迪 杜春鹏
+
+产品简介&amp;emsp;&amp;emsp;网易云课堂，是网易公司打造的在线实用技能学习平台，该平台于2012年12月底正式上线，主要为学习者提供海量、优质的课程，用户可以根据自身的学习程度，自主安排学习进度。&amp;emsp;&amp;emsp;立足于实用性的要求，网易云课堂与多家教育、培训机构建立合作，课程数量已达4100+，课时总数超50000,涵盖实用软件">
+<meta name="twitter:image" content="http://github.com/tangkedi/images/wangyi/wangyi1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://github.com/tangkedi/2017/02/10/蜜蜂学堂/"/>
+
+
+
+
+
+  <title> 网易云案例分析 | 小路弯弯 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">小路弯弯</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">It is the time to change</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://github.com/tangkedi/2017/02/10/蜜蜂学堂/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="柯迪">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/headimg.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="小路弯弯">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="小路弯弯" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                网易云案例分析
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-10T22:29:17+08:00">
+                2017-02-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/校园经历/" itemprop="url" rel="index">
+                    <span itemprop="name">校园经历</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/10/蜜蜂学堂/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/10/蜜蜂学堂/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote><p>&emsp;&emsp;小组成员 ：雷勋陶 汤迪 杜春鹏</p>
+</blockquote>
+<h4 id="产品简介"><a href="#产品简介" class="headerlink" title="产品简介"></a>产品简介</h4><p>&emsp;&emsp;网易云课堂，是网易公司打造的在线实用技能学习平台，该平台于2012年12月底正式上线，主要为学习者提供海量、优质的课程，用户可以根据自身的学习程度，自主安排学习进度。<br>&emsp;&emsp;立足于实用性的要求，网易云课堂与多家教育、培训机构建立合作，课程数量已达4100+，课时总数超50000,涵盖实用软件、IT与互联网、外语学习、生活家居、兴趣爱好、职场技能、金融管理、考试认证、中小学、亲子教育等十余大门类。</p>
+<h4 id="战略总结"><a href="#战略总结" class="headerlink" title="战略总结"></a>战略总结</h4><p>&emsp;&emsp;从偏重实用技能学习的网络云课堂开始，与偏重人文社科及基础概念的网易公开课联合，打造“网易大教育品牌”，构建整体教育体系，一步一步抢占中国网络教育市场份额。<br><img src="/images/wangyi/wangyi1.png"></p>
+<h4 id="应用模式分析-Application-model-analysis"><a href="#应用模式分析-Application-model-analysis" class="headerlink" title="应用模式分析  Application model analysis"></a>应用模式分析  Application model analysis</h4><h5 id="目标用户"><a href="#目标用户" class="headerlink" title="目标用户"></a>目标用户</h5><p>&emsp;&emsp;网易云课堂致力于打造为用户提供个性化网络教学服务、最实用的专业技能课程和最贴心有效的移动学习体验的在线实用技能学习平台。它的主要目标是为学习者提供海量、优质的课程，同时让用户可以根据自身的学习程度，自主安排学习进度。<br>&emsp;&emsp;网易云课堂的目标用户是需要学习实用技能、考试升级的人群，比如即将大学毕业的学生、初入职场的新人或者是希望拓展工作技能的职场人士。<br><img src="/images/wangyi/wangyi2.png"></p>
+<h5 id="服务模式"><a href="#服务模式" class="headerlink" title="服务模式"></a>服务模式</h5><h6 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h6><p><strong>订阅：</strong>网易云课堂是一款个性化的线上学习软件，支持用户自主选课。当用户找到自己所需要的课程时，即可点击课程首页的“参与该课程”按钮。课程会自动添加到“我的学习”板块中，用户可以随时查找与管理。<br><strong>评价：</strong>网易云课堂允许用户发表自己对于所学课程的看法和评价。评价采取星级制度，五星为最高评价，用户评价的内容可以随时更改没有限制。同时用户不能够通过评价与其他参与者发生互动。<br><strong>分享：</strong>网易云课堂支持用户将课程一键分享到易信、易信朋友圈、微信、微信朋友圈以及微博、QQ和QQ空间这些主流社交平台。</p>
+<h6 id="特色功能"><a href="#特色功能" class="headerlink" title="特色功能"></a>特色功能</h6><p><strong>课程缓存：</strong>针对手机端移动便携的特点，网易云课堂提供了课程视频缓存功能。用户可以在连接wifi时缓存课程视频，以便随时随地都可以学习已经下载好的课程而不用受到网络、流量等方面的限制。免费课程只要参加学习就可下载，付费课程需要提交相关费用之后才可下载。<br><strong>进度管理：</strong>针对已经学习过的课程，网易云课堂提供课程学习标记功能，允许用户自行标记是否已经完成该门课程。标记的结果会在“我的学习”主页面中显示。<br><strong>微专业：</strong>网易微专业由网易云课堂联合各领域知名专家，以就业为导向，直达企业具体刚需岗位而精心打造的职业培训方案，解决传统教育与社会需求脱节的问题，学员可以快速、全面地掌握相关技能，并获得工作机会。同时参与者按要求完成学习后，考试通过即可获得相关专业认定证书。</p>
+<h6 id="服务流程"><a href="#服务流程" class="headerlink" title="服务流程"></a>服务流程</h6><p>&emsp;&emsp;用户登陆后可以查看“账号”板块中我的优惠券、我的购物车以及我的订单等类容，同时可以在我的学习板块管理已经下载及正在学习的内容。<br>&emsp;&emsp;用户可以根据免费课程、热门课程、IT/互联网、职场提升、兴趣生活、语言留学、中小学等内容板块进行浏览，也可以直接搜索相关的关键词以定位感兴趣的内容。网易云课堂的课程内容分为免费课程和收费课程，其中收费课程也有部分免费试看的内容。用户可以把自己喜欢的课程下载到本地缓存并自动加入到参与的课程板块。</p>
+<h5 id="盈利模式"><a href="#盈利模式" class="headerlink" title="盈利模式"></a>盈利模式</h5><p>&emsp;&emsp;1.网易云课堂收取一定的平台中介费。依托网易云课堂的流量资源，进而打造起来的网易云课堂会是在线教育平台的身份。网易云在这种课程上不单独收取费用，只提供平台，不生产内容。<br>&emsp;&emsp;2.网易云课堂推出自己制作的精品课程，收取的费用完全归入自己门户。即是目前他主要推荐的“微课堂”。如网易旗下的网易杭州研究院，在网易云课堂上发布了一系列前端，后台，产品运营，计算机基础等各方各面的课程，收费在3000元左右浮动。<br>&emsp;&emsp;目前在线教育的商业前景依然很值得发掘，比如去年网易云课堂推出以MOOC产品形态展现的“计算机专业课程”，上线一个月，截止12月1日开课前，便已累计收到了22万选课人次，这份火热也验证了在线教育的发展空间。网易云自己开设的精品课程的选课人数也可圈可点，可见研发课程也是其很明智的一个决定。</p>
+<h5 id="用户管理模式"><a href="#用户管理模式" class="headerlink" title="用户管理模式"></a>用户管理模式</h5><p>&emsp;&emsp;网易云课堂的用户只分为两类，即注册用户和浏览用户，浏览用户的权限很少，甚至不能够观看课程视频，所以其更多的是通过丰富的内容和完善的用户体验来吸引用户。网易云课堂可以通过网易邮箱、QQ、微信、微博和人人网等社交媒体来登陆账号，这样一方面可以免除用户重新注册账号的过程，减少用户的工作量，同时还可以通过这些社交媒体进行分享、发布以及与好友之间的互动。</p>
+<h4 id="运营状况管理分析"><a href="#运营状况管理分析" class="headerlink" title="运营状况管理分析"></a>运营状况管理分析</h4><h5 id="整体信息架构"><a href="#整体信息架构" class="headerlink" title="整体信息架构"></a>整体信息架构</h5><p><img src="/images/wangyi/wangyi3.png" class="full-image"></p>
+<h5 id="用户体验分析————功能篇"><a href="#用户体验分析————功能篇" class="headerlink" title="用户体验分析————功能篇"></a>用户体验分析————功能篇</h5><p>&emsp;&emsp;1.没有个性化推荐，版面全是系统推荐的内容<br><img src="/images/wangyi/p1.png"><br><img src="/images/wangyi/p2.png"><br>&emsp;&emsp;2.课程评论区没有回复功能，评论质量低，没有“学习圏”的感觉<br><img src="/images/wangyi/p3.png"><br><img src="/images/wangyi/p4.png"><br>&emsp;&emsp;3.学习过程中没有标记功能<br><img src="/images/wangyi/p5.png"><br>&emsp;&emsp;4.ios端不能找到已下载功能<br><img src="/images/wangyi/p6.png"><br><img src="/images/wangyi/p7.png"><br>&emsp;&emsp;5.基本没有师生交流，沟通渠道很狭窄<br><img src="/images/wangyi/p8.png"><br><img src="/images/wangyi/p9.png"></p>
+<h5 id="用户体验分析————细节篇"><a href="#用户体验分析————细节篇" class="headerlink" title="用户体验分析————细节篇"></a>用户体验分析————细节篇</h5><p>&emsp;&emsp;1.搜索功能差劲，经常发生错误<br><img src="/images/wangyi/x.png"><br><img src="/images/wangyi/x1.png"><br>&emsp;&emsp;2.视频不能锁定&amp;安卓端视频不能直接横屏<br><img src="/images/wangyi/x2.png"><br><img src="/images/wangyi/x3.png"><br>&emsp;&emsp;3.视频点击之后直接播放<br><img src="/images/wangyi/x4.png"><br><img src="/images/wangyi/x5.png"></p>
+<h5 id="产品推广模式"><a href="#产品推广模式" class="headerlink" title="产品推广模式"></a>产品推广模式</h5><p>&emsp;&emsp;在产品初期，网易云课堂在推广这一块很疲软，内部人员也曾说明基本是靠兄弟产品网易公开课的推广。随着网易云课堂慢慢的发展，它也慢慢开始通过赞助/举办大赛来推广自己的品牌。但是目前来看，网易云课堂的推广依然是个问题。如何找到更为合适有效的推广模式，对它来说也是亟待解决的。</p>
+<h5 id="结论与建议"><a href="#结论与建议" class="headerlink" title="结论与建议"></a>结论与建议</h5><p>&emsp;&emsp;对于网易公开课的移动端来说，问题主要还是体现在互动方面。师生之间，用户之间，都没有足够的交流。社交性比较差。对于一个学习平台而言，如果没有与他人的讨论交流作为基础，就不能营造一种良好的互动学习氛围。除去交互上以及小功能上的区别，云课堂主要还是要在社交，沟通上下功夫。另外产品的推广也可以适当的加强。</p>
+<h4 id="创新"><a href="#创新" class="headerlink" title="创新"></a>创新</h4><p>&emsp;&emsp;蜜蜂学堂—-展示你的“蜂芒”！<br><img src="/images/wangyi/mi1.png"></p>
+<h5 id="目标定位"><a href="#目标定位" class="headerlink" title="目标定位"></a>目标定位</h5><p>&emsp;&emsp;网易云课堂致力于打造为用户提供个性化网络教学服务、最实用的专业技能课程和最贴心有效的移动学习体验的在线实用技能学习平台。<br>它的主要目标是为学习者提供海量、优质的课程，同时让用户可以根据自身的学习程度，自主安排学习进度。<br>&emsp;&emsp;网易云课堂的目标用户是需要学习实用技能、考试升级的人群，比如即将大学毕业的学生、初入职场的新人或者是希望拓展工作技能的职场人士。</p>
+<h5 id="服务模式-1"><a href="#服务模式-1" class="headerlink" title="服务模式"></a>服务模式</h5><p>&emsp;&emsp;<strong>基础功能</strong><br>&emsp;&emsp;<strong>学习选课：</strong>蜜蜂学堂<br>是一款个性化的线上学习软件，支持用户自主选课。用户可以通过点击“参与课程”来进入学习自己所选择的课程。同时课程会自动添加到“我的学习”板块中，用户可以在该板块随时查找与管理。<br> &emsp;&emsp;<strong>烂笔头（笔记）：</strong>蜜蜂学堂支持用户在学习视频课程时记录下自己的学习心得及体会。为了能够很好的同步用户笔记与具体课程的关系，笔记部分还包含有视频时间点等基础信息。同时，用户笔记分为私人笔记与公开笔记两部分，公开笔记在课程板块下，允许所有用户自由浏览；而私人笔记则只有用户本人可见。<br> &emsp;&emsp;<strong>评价：</strong>蜜蜂学堂允许用户发表自己对于所学课程的看法和评价。评价采取星级制度，五星为最高评价，同时评价内容有着严格的限制，对于没有实际意义的评价将会定期删除。用户一旦对课程做出评价就不可更改。<br> &emsp;&emsp;<strong>课后讨论：</strong>基于蜜蜂学堂做教育的本质，讨论模块也是十分重要的。讨论模块分为课程讨论区和比赛讨论区，课程讨论区主要提供关于在线视频课程内容的讨论，用户可以把自己在学习过程中的问题提出来，与其他学习者形成积极交流的气氛，有利于学习效率的提高；而比赛讨论区则提供比赛相关事务咨询功能，形成比赛小圈子，帮助用户更好的去了解比赛内容及注意事项。<br> &emsp;&emsp;<strong>好友功能：</strong>蜜蜂学堂支持用户在浏览评价、公共笔记等用户发布内容时，能够点击用户头像来添加好友。用户点击头像可以链接到个人空间页面，空间主页提供部分主人的介绍以及动态，同时还可以通过主页面的好友添加功能来向主人发送好友请求，当主人同意后用户即可拥有更高的浏览权限。</p>
+<h5 id="特色功能-1"><a href="#特色功能-1" class="headerlink" title="特色功能"></a>特色功能</h5><p> &emsp;&emsp;<strong>学习私人化定制：</strong>蜜蜂学堂提供学习私人化定制功能，它在每个大类的推荐模块里面。用户进入学习私人化定制后，会对自己想学的科目，自身的基础，想学到的程度作出选择，然后我们根据用户的个人情况进行课程推荐，达到学习私人化定制的目的。<br>&emsp;&emsp;<strong>自定义学习模式：</strong>用户可以选择自由学习模式和计划学习模式。在自由学习模式中，用户可以自由选择课程学习，而在计划学习模式中，将会启用我们的“蜂鸣系统”，我们将为用户制定学习计划，并每天在用户设定的时间段进行提醒学习和复习。<br>&emsp;&emsp;<strong>蜂芒大赛：</strong>我们每个月将在每个大板块开展一次比赛，比赛分为初级场和高机场，用户根据自己的学习水平选择。用户有半个月的准备时间，来参加本次比赛。同时在比赛的过程中看到他和他同时学习的同学之间优势与不足。大赛还会有专门的评委点评自己选出的前十作品，看看业界人士对于作品的看法。比赛奖励一定数额的奖金，前几名能够提供推荐给合作公司的机会。每月优秀作品会整理成册，以供参考。<br>&emsp;&emsp;<strong>特色成就系统：</strong>用户完成了一门课程，会获得成就认证。参加蜂芒大赛获得名次也会<br>一定奖励认证。完成课程以及打卡到一定次数会有奖励。认证可以分享到你的社交平台。并且获得某些特定荣誉可以获得荣誉头像框，彰显身份</p>
+<h5 id="产品盈利模式"><a href="#产品盈利模式" class="headerlink" title="产品盈利模式"></a>产品盈利模式</h5><p>&emsp;&emsp;我们的盈利主要有三种方式大赛赞助、作品出版、平台抽成。<br>&emsp;&emsp;大赛赞助，我们提供的题目可以是赞助方自己命题，来获得相应的创意来源，利用大赛制造社会热点吸引关注的软广告，发现对自己公司有利的人才提前拉拢，在未入职场或者刚入职场的人心中建立良好地位。<br>&emsp;&emsp;作品出版，在参赛条例中写明会有出版使用权后进行整理出版，以电子书的形式出版。<br>&emsp;&emsp;平台抽成，对于收费的课程我们会以一定比例收取平台管理费。</p>
+<h5 id="用户管理模式-1"><a href="#用户管理模式-1" class="headerlink" title="用户管理模式"></a>用户管理模式</h5><p>&emsp;&emsp;1.注册认证管理。用户可以通过新浪微博、微信号、邮箱、手机号、蜂号（独立注册管理账户）认证登录。<br>&emsp;&emsp;2.用户分类管理模式。蜜蜂学堂的用户包括一般用户（学员）、内容提供者（课程生产者）。用户是消费信息同时产生有意义的讨论与作品，而内容提供者则提供课堂。<br>&emsp;&emsp;3.用户激励管理模式。蜜蜂学堂有完善的积分系统和成就认证系统。<br>&emsp;&emsp;积分系统是根据你的学习程度来奖励一定积分，换取一些特权。在你学习过程中，你的问答有百人以上认同，会有积分奖励。比赛的名次获取，我们会给予相应的积分奖励。你完成了一门课程，根据完成度来给予积分。平时打卡签到到一定的次数也可以获得积分。积分可以兑换不同的头像框与徽章奖励。<br>&emsp;&emsp;成就认证系统是，你完成课程，或者在比赛中获得荣誉，有较大的贡献，我们会提供一些证书认证来分享到社交平台中去。<br><blockquote><p>&emsp;&emsp;<strong>后记:</strong>目前的在线教育平台多只是一个”平台”，而不是一个圈子，用户来了只是单纯的学习，没有学习的规划与学习的热情，而我们以蜜蜂为喻，同样以蜜蜂的勤劳为出发点设计应用，在线教育也应该是有目标，有交流，有讨论的。于是就产生了“蜂芒毕露”，成就系统，比赛讨论区这样的功能设计，希望能够用这些东西激起学习者们的热情。</p>
+</blockquote></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/APP分析/" rel="tag"># APP分析</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/12/gogo/" rel="next" title="gogo--代购类APP初步设计">
+                <i class="fa fa-chevron-left"></i> gogo--代购类APP初步设计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/10/蜜蜂学堂/"
+           data-title="网易云案例分析" data-url="http://github.com/tangkedi/2017/02/10/蜜蜂学堂/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/headimg.png"
+               alt="柯迪" />
+          <p class="site-author-name" itemprop="name">柯迪</p>
+          <p class="site-description motion-element" itemprop="description">前行浅行</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="mailto:kakatangdi@foxmail.com" target="_blank" title="mail">
+                  
+                    <i class="fa fa-fw fa-mail"></i>
+                  
+                  mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#产品简介"><span class="nav-number">1.</span> <span class="nav-text">产品简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#战略总结"><span class="nav-number">2.</span> <span class="nav-text">战略总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用模式分析-Application-model-analysis"><span class="nav-number">3.</span> <span class="nav-text">应用模式分析  Application model analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#目标用户"><span class="nav-number">3.1.</span> <span class="nav-text">目标用户</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#服务模式"><span class="nav-number">3.2.</span> <span class="nav-text">服务模式</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#基础功能"><span class="nav-number">3.2.1.</span> <span class="nav-text">基础功能</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#特色功能"><span class="nav-number">3.2.2.</span> <span class="nav-text">特色功能</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#服务流程"><span class="nav-number">3.2.3.</span> <span class="nav-text">服务流程</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#盈利模式"><span class="nav-number">3.3.</span> <span class="nav-text">盈利模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用户管理模式"><span class="nav-number">3.4.</span> <span class="nav-text">用户管理模式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运营状况管理分析"><span class="nav-number">4.</span> <span class="nav-text">运营状况管理分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#整体信息架构"><span class="nav-number">4.1.</span> <span class="nav-text">整体信息架构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用户体验分析————功能篇"><span class="nav-number">4.2.</span> <span class="nav-text">用户体验分析————功能篇</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用户体验分析————细节篇"><span class="nav-number">4.3.</span> <span class="nav-text">用户体验分析————细节篇</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#产品推广模式"><span class="nav-number">4.4.</span> <span class="nav-text">产品推广模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#结论与建议"><span class="nav-number">4.5.</span> <span class="nav-text">结论与建议</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创新"><span class="nav-number">5.</span> <span class="nav-text">创新</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#目标定位"><span class="nav-number">5.1.</span> <span class="nav-text">目标定位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#服务模式-1"><span class="nav-number">5.2.</span> <span class="nav-text">服务模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#特色功能-1"><span class="nav-number">5.3.</span> <span class="nav-text">特色功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#产品盈利模式"><span class="nav-number">5.4.</span> <span class="nav-text">产品盈利模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用户管理模式-1"><span class="nav-number">5.5.</span> <span class="nav-text">用户管理模式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">柯迪</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tangkedi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
